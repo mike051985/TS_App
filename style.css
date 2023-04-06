@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+.container {
+    width: 500px;
+    margin: 3.125rem auto 0 auto;
+    margin-bottom: 4em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #3498DB;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    flex-grow: 1;
+    margin-right: 10px;
+    background-color: #AED6F1;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    font-size: 16px;
+    justify-content: space-between;
+    background-color: #1374b5;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+li button {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* For screens smaller than 480px (mobile portrait) */
+@media only screen and (max-width: 480px) {
+    form {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        margin-top: 10px;
+    }
+}
+
+/* For screens between 480px and 768px (mobile landscape and tablet portrait) */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    ul {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* For screens larger than 768px (desktop) */
+@media only screen and (min-width: 768px) {
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+    }
+
+    ul {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+    }
+
+}
