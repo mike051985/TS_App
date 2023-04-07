@@ -1,3 +1,4 @@
+// Defife the class TodoList to represent the list of todos
 var TodoList = /** @class */ (function () {
     function TodoList() {
         var storedTodos = localStorage.getItem('todos');
@@ -26,16 +27,19 @@ var TodoList = /** @class */ (function () {
     };
     return TodoList;
 }());
+// Get the task input and task list elements
 var form = document.querySelector('form');
 var input = form.querySelector('input');
 var todoList = new TodoList();
 var list = document.getElementById('todo-list');
+// Define a function to render the task list
 function render() {
     list.innerHTML = '';
     var tasks = todoList.getTasks();
     var _loop_1 = function (i) {
         var task = tasks[i];
         var li = document.createElement('li');
+        // Add a checkbox to check if the task is completed
         var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = task.completed;
@@ -45,6 +49,7 @@ function render() {
         });
         li.appendChild(checkbox);
         li.appendChild(document.createTextNode(task.task));
+        // Add a button to delete the task
         var button = document.createElement('button');
         button.textContent = 'Delete';
         button.addEventListener('click', function () {
@@ -58,6 +63,7 @@ function render() {
         _loop_1(i);
     }
 }
+//Add an event listener to the form
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     var task = input.value.trim();
