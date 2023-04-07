@@ -63,7 +63,6 @@ function render() {
         _loop_1(i);
     }
 }
-//Add an event listener to the form
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     var task = input.value.trim();

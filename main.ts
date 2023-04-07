@@ -76,7 +76,6 @@ function render(): void {
     }
 }
 
-//Add an event listener to the form
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const task = input.value.trim();
